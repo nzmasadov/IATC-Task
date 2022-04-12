@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getResult()
+        
         setupUI()
         setupImg()
         view.backgroundColor = .gray
@@ -32,8 +34,39 @@ class ViewController: UIViewController {
         view.addSubview(myImage)
     }
     
-    
+    func getResult() {
+            
+            // Exercise 1
+            print("My best friend is Agil")
+            
+            // Exercise 2
+            lazy var name = "Nazim"
+            lazy var adress = "Sharifzada street, Baku"
+            
+            print("I am \(name) and my address is \(adress)")
+            
+            // Exercise 3
+            lazy var randomNumber = Int.random(in: 10...20)
+            
+            print("The division by 4 of the number: \(randomNumber / 4)")
+            
+            // Exercise 4
+            lazy var x = Int.random(in: 0...100)
+            
+            print("Smaller by 22: \(x - 22), bigger by 22: \(x + 22), the reminder of the division by 2: \(x % 2)")
+            
+            // Exercise 5
+            func sum(_ x:Int, _ y:Int, _ z:Int) -> Int {
+                return x + y + z
+            }
+            
+            lazy var a = Int.random(in: 0...100)
+            lazy var b = Int.random(in: 0...100)
+            lazy var c = Int.random(in: 0...100)
+            
+            print("Sum: \(sum(a, b, c))")
 
+        }
 
 }
 
